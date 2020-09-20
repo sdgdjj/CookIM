@@ -11,7 +11,7 @@
 
 
   <properties>
-	<scala.version>2.11.8</scala.version>
+	<scala.version>2.13.3</scala.version>
 	<scala.maven.version>2.15.2</scala.maven.version>
   </properties>
 
@@ -173,12 +173,10 @@
 	     </includes>
 	    </artifactSet>
 	    <transformers>
-	      <transformer
-	       implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+	      <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
 	       <resource>reference.conf</resource>
 	      </transformer>
-	      <transformer
-	       implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+	      <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
 	       <manifestEntries>
 	        <Main-Class>akka.Main</Main-Class>
 	       </manifestEntries>
