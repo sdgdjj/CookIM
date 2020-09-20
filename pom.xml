@@ -120,7 +120,7 @@
 	<dependency>
 	    <groupId>org.reactivemongo</groupId>
 	    <artifactId>reactivemongo-play-json_2.11</artifactId>
-	    <version>0.12.3</version>
+	    <version>0.20.12-play27-fix1</version>
 	</dependency>
 
   </dependencies>
@@ -173,12 +173,10 @@
 	     </includes>
 	    </artifactSet>
 	    <transformers>
-	      <transformer
-	       implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+	      <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
 	       <resource>reference.conf</resource>
 	      </transformer>
-	      <transformer
-	       implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+	      <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
 	       <manifestEntries>
 	        <Main-Class>akka.Main</Main-Class>
 	       </manifestEntries>
