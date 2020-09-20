@@ -115,7 +115,7 @@
 	<dependency>
 	    <groupId>org.reactivemongo</groupId>
 	    <artifactId>reactivemongo_2.11</artifactId>
-	    <version>0.12.3</version>
+	    <version>0.20.12-noshaded-fix1</version>
 	</dependency>
 	<dependency>
 	    <groupId>org.reactivemongo</groupId>
@@ -173,12 +173,10 @@
 	     </includes>
 	    </artifactSet>
 	    <transformers>
-	      <transformer
-	       implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+	      <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
 	       <resource>reference.conf</resource>
 	      </transformer>
-	      <transformer
-	       implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+	      <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
 	       <manifestEntries>
 	        <Main-Class>akka.Main</Main-Class>
 	       </manifestEntries>
